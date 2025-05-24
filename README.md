@@ -18,7 +18,7 @@ npm install @universal-packages/tsconfig
 
 ```json
 {
-  "extends": "@universal-packages/node/tsconfig.json",
+  "extends": "@universal-packages/tsconfig/node/tsconfig.json",
   "include": ["src/**/*"]
 }
 ```
