@@ -1,0 +1,46 @@
+{
+  "name": "@universal-packages/tsconfig",
+  "version": "0.0.0",
+  "description": "Typescript configurations for universal packages",
+  "author": "David De Anda <david@universal-packages.com> (https://github.com/universal-packages)",
+  "license": "MIT",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": "git@github.com:universal-packages/universal-tsconfig.git",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --p tsconfig.dis.json",
+    "test": "tsx src/tests.test.ts",
+    "test:coverage": "c8 --reporter=text --reporter=json --reporter=html --reporter=lcov --reporter=text-summary tsx src/tests.test.ts",
+    "test:watch": "tsx watch src/tests.test.ts",
+    "format": "prettier --write \"./{src,tests}/**/*.{ts,tsx,js,jsx,json}\""
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/node": "^22.15.21",
+    "c8": "^10.1.3",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 180,
+    "trailingComma": "none",
+    "plugins": [
+      "@trivago/prettier-plugin-sort-imports"
+    ],
+    "importOrder": [
+      "^[./]"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "importOrderParserPlugins": [
+      "typescript",
+      "jsx",
+      "classProperties",
+      "decorators-legacy"
+    ]
+  }
+}
