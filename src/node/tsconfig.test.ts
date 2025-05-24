@@ -1,7 +1,7 @@
-import { tsConfig } from './tsconfig'
+import { nodeTsConfig } from './tsconfig'
 
 export function nodeTsconfigTest() {
-  const config = tsConfig()
+  const config = nodeTsConfig()
 
   const expected = {
     compilerOptions: {
@@ -95,7 +95,7 @@ export function nodeTsconfigTest() {
   }
 
   if (JSON.stringify(config) !== JSON.stringify(expected)) {
-    console.log(JSON.stringify(tsConfig, null, 2))
+    console.log(JSON.stringify(config, null, 2))
     console.error('node/tsconfig.json is not valid')
     process.exit(1)
   } else {
