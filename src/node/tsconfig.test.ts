@@ -84,7 +84,7 @@ export function nodeTsconfigTest() {
       disableReferencedProjectLoad: false,
       disableSolutionSearching: false,
       disableSourceOfProjectReferenceRedirect: false,
-      incremental: true,
+      incremental: false,
       noErrorTruncation: true,
       preserveWatchOutput: false,
       pretty: true,
