@@ -8,3 +8,4 @@ for FILE in $FORMATTABLE_STAGED_FILES; do
 done
 
 npm test
+npm run build
